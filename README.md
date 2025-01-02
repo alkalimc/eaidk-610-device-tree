@@ -25,7 +25,7 @@
 
 为没有dtb支持的系统适配GPU驱动很难，即使解决了kernel部分的驱动userspace也很麻烦，但是为适配了GPU的系统适配mipi屏幕和USB3.0可能难度会相对较低
 
-所有目前已经获得的[dtb](https://github.com/Lasius-alienus/eaidk-610-device-tree/tree/main/dtb "dtb")/[dts](https://github.com/Lasius-alienus/eaidk-610-device-tree/tree/main/dts "dts")都分类放在了相应的文件夹中部分反编译的dts放在了[dts(DTC)]((https://github.com/Lasius-alienus/eaidk-610-device-tree/tree/main/dts(DTC)文件夹中
+所有目前已经获得的[dtb](https://github.com/Lasius-alienus/eaidk-610-device-tree/tree/main/dtb "dtb")/[dts](https://github.com/Lasius-alienus/eaidk-610-device-tree/tree/main/dts "dts")都分类放在了相应的文件夹中部分反编译的dts放在了[dts(DTC)](https://github.com/Lasius-alienus/eaidk-610-device-tree/tree/main/dts(DTC))文件夹中
 
 目前使用的armbian官方提供的dts，编译后得到的[dtb](https://github.com/Lasius-alienus/eaidk-610-device-tree/tree/main/support%20orangepi%204%20lts "dtb")配合orangpi 4 lts已经可以驱动这块板卡的大多数功能。不能驱动的有：type-c（未测试）可能不能正常运行。Bluetooth可以连接设备，但连接蓝牙音响无输出。dts中没有mipi的描述，因此适配困难。目前主要的问题是，开机时出现`A start job is running for Load Kernel Modules`,超时时间为90s，需要超时后才能启动系统。
 
